@@ -26,8 +26,7 @@ console.log("=== SISTEM POIN MEMBER KEDAI KOPI ===");
 
 // TODO 1: Tulis satu baris console.log() untuk memastikan file app.js sudah terhubung!
 // Contoh output: "Skrip app.js berhasil terhubung!"
-
-
+console.log("Script app.js telah terhubung ");
 
 
 // ============================================================
@@ -39,16 +38,21 @@ console.log("=== SISTEM POIN MEMBER KEDAI KOPI ===");
 // 1. Buat konstanta "NAMA_KEDAI" bertipe string (misal: "Kopi PSTI Kampus").
 // 2. Buat variabel "namaKasir" (misal: "Kak Eko") dan "shiftKerja" menggunakan "let".
 // 3. Cetak nilai NAMA_KEDAI, namaKasir, dan shiftKerja ke Console menggunakan console.log().
+const nama_kedai = "Kopi PSTI Kampus";
+let nama_kasir = "Altari";
+let shiftKerja = "Sore";
 
-
+console.log("Nama Kedai: " + nama_kedai);
+console.log("Nama Kasir: " + nama_kasir);
+console.log("Shiftkerja: " + shiftKerja);
 
 
 // ---- DEMO PERBEDAAN LET vs CONST ----
 // TODO 2B:
 // Ubah (re-assign) nilai variabel "namaKasir" dengan nama kasir lain,
 // lalu cetak ke Console untuk membuktikan bahwa variabel "let" nilainya dapat diubah.
-
-
+nama_kasir = "Khansa"; 
+console.log("Kasir Baru telah ditambahkan : " + nama_kasir);
 
 
 // ---- BAGIAN 2B: INPUT INTERAKTIF & PENGANDAIAN DASAR ----
@@ -58,8 +62,18 @@ console.log("=== SISTEM POIN MEMBER KEDAI KOPI ===");
 // 3. Gunakan percabangan "if - else":
 //    - JIKA namaPelanggan ada isinya: tampilkan alert sapaan dan log ke console.
 //    - JIKA namaPelanggan kosong / klik Cancel: beri nilai default "Pelanggan Setia" dan tampilkan alert pemberitahuan.
-
-
+alert("Selamat Datang di Sistem Kedai Kopi PSTI!");
+let nama_pelanggan = prompt("Hallo! Masukkan nama kamu untuk memulai membership Kedai Kopi PSTI");
+if (nama_pelanggan) {
+    alert("Hallo!, " + nama_pelanggan + " Yuk kita mulai membership!");
+    console.log("Pelanggan Baru : " + nama_pelanggan); 
+} else {
+    // Jika user tidak memsukkan nama akan disebut anonim
+    alert("Kamu tidak memasukkan nama, kamu disebut anonymous");
+    nama_pelanggan = "Pelanggan Setia";
+    console.log("Pelanggan Anonim : " + nama_pelanggan); 
+    alert("Kamu merupakan " + nama_pelanggan + ", Yuk langsung ke pemesanan!");
+} 
 
 
 // ============================================================
@@ -72,8 +86,16 @@ console.log("=== SISTEM POIN MEMBER KEDAI KOPI ===");
 //    (isi dengan angka bulat bebas, misal: 45, 35, 20).
 // 2. Buat variabel "totalPoin" yang menjumlahkan ketiga variabel poin di atas.
 // 3. Cetak rincian perolehan poin dan totalPoin ke Console menggunakan console.log().
+let poin_kopi = 30;
+let poin_makanan = 45;
+let poin_merchandise = 25;
 
+let total_poin = poin_kopi + poin_makanan + poin_merchandise;
 
+console.log("Poin Kopi : " + poin_kopi);
+console.log("Poin Makanan : " + poin_makanan);
+console.log("Poin Merchandise : " + poin_merchandise);
+console.log("Total Poin Keseluruhan : " + total_poin);
 
 
 // ============================================================
@@ -92,7 +114,6 @@ console.log("=== SISTEM POIN MEMBER KEDAI KOPI ===");
 
 
 
-
 // ============================================================
 // AKTIVITAS 5: Function — Membuat Fungsi yang Bisa Dipakai Ulang
 // ============================================================
@@ -100,7 +121,6 @@ console.log("=== SISTEM POIN MEMBER KEDAI KOPI ===");
 // TODO 5A:
 // Buat fungsi "hitungTotalPoin(p1, p2, p3)" yang menerima 3 parameter nilai poin,
 // menjumlahkannya, dan mengembalikan (return) nilai total penjumlahannya.
-
 
 
 
@@ -119,7 +139,6 @@ console.log("=== SISTEM POIN MEMBER KEDAI KOPI ===");
 
 
 
-
 // ============================================================
 // AKTIVITAS 6: Array & For Loop — Daftar Menu Rekomendasi
 // ============================================================
@@ -129,11 +148,9 @@ console.log("=== SISTEM POIN MEMBER KEDAI KOPI ===");
 
 
 
-
 // TODO 6B:
 // Gunakan perulangan "for loop" untuk mencetak setiap menu ke Console dengan format:
 // "1. Nama Menu", "2. Nama Menu", dst. Gunakan (i + 1) untuk nomor urutnya.
-
 
 
 
